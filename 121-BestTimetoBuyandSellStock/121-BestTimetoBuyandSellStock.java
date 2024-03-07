@@ -1,17 +1,17 @@
-    public int maxProfit(int[] prices){
-        int left = 0;
-        int right = 1;
-        int maximumProfit = 0;
-        while(right < prices.length) {
-            int profit = prices[right] - prices[left];
-            if(prices[right] > prices[left]) {
-                maximumProfit = Math.max(profit,maximumProfit);
-            } else {
-                left = right;
+        int leastSoFar = Integer.MAX_VALUE;
+        int profitIfSoldToday = 0;
+        int maximumProf = 0;
+
+        for(int i=0; i<prices.length; i++) {
+            if(prices[i] < leastSoFar) {
+                leastSoFar = prices[i];
             }
-            right+=1;
+            profitIfSoldToday = prices[i] - leastSoFar;
+            if(maximumProf < profitIfSoldToday) {
+                maximumProf = profitIfSoldToday;
+            }
         }
-        return maximumProfit;
-    }
-}
+        return maximumProf;
+    public int maxProfit(int[] prices){
+class Solution {
 [
