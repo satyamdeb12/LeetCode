@@ -1,16 +1,17 @@
-class Solution {
-    public int lengthOfLastWord(String s) {
-        String lastWord = "";
-        s = s.strip();
-        int i=s.length()-1;
-        while(i>=0) {
-            if(Character.isWhitespace(s.charAt(i))){
-                return s.substring(i+1).length();
-            }
-            i--;
-        }
+········boolean·wordStarted·=·false;
+········int·i=s.length()-1;
+········while·(i>=0)·{
+············if(!Character.isWhitespace(s.charAt(i)))·{
+················wordStarted·=·true;
+················lastWord·=·s.charAt(i)·+·lastWord;
+············}·else·{
+················if(wordStarted·==·true)·{
+····················System.out.println(lastWord);
+····················return·lastWord.length();
+················}
+············}
+············i--;
+········}
+········return·lastWord.length();
     }
-
-        return lastWord.length();
-}
 "
