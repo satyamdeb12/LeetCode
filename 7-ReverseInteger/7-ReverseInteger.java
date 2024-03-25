@@ -1,15 +1,15 @@
-        int rev = 0;
-        while(x != 0) {
-            int digit = x%10;
-            if((rev > Integer.MAX_VALUE/10) || (rev < Integer.MIN_VALUE/10)){
-                return 0;
-            }
-            rev = (rev*10)+digit;
+        // return rev;
+        long reverse = 0;
+        while(x!=0) {
+            reverse = (reverse*10)+(x%10);
             x /=10;
         }
+        if((reverse>2147483647) || (reverse<-2147483648)) {
+            return 0;
+        }
+        return (int) reverse;
     }
-        return rev;
 }
-    public int reverse(int x) {
-class Solution {
+        // }
+        //     x /=10;
 1
