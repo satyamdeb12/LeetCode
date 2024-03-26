@@ -1,12 +1,9 @@
 class Solution {
     public boolean isPowerOfTwo(int n) {
-        for(int i = 0; i<=30; i++) {
-            int poweredInt = (int) Math.pow(2,i);
-            if(n==poweredInt) {
-                return true;
-            }
+        if(n<=0) return false;
+        else {
+            return (n & (n-1) ) == 0;
         }
-        return false;
     }
 }
 1
