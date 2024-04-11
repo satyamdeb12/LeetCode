@@ -1,7 +1,3 @@
-    Arrays.sort(nums);
-    int start = 0;
-    int end = nums.length;
-    int mid = start + (end-start)/2;
 
     while(start<end) {
       if(nums[mid] == mid){
@@ -12,6 +8,10 @@
       mid = start + (end-start)/2;
     }
 
-    public int missingNumber(int[] nums) {
-class Solution {
+    return mid;
+    }
+}
+    int mid = start + (end-start)/2;
+    int end = nums.length;
+    int start = 0;
 [
