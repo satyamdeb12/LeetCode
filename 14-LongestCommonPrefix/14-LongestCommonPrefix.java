@@ -8,15 +8,13 @@ class Solution {
         int i = 0;
         while((i < first.length()) && (i < last.length())) {
             if(first.charAt(i) == last.charAt(i)) {
-        }
-                ans.append(first.charAt(i));
-            } else {
-        StringBuilder ans = new StringBuilder();
-                return ans.toString();
-            }
-    }
                 i++;
-        return ans.toString();
+            } else {
+                break;
+            }
+        }
+        return first.substring(0, i);
+    }
 }
 [
 ["flower","flow","flight"]
